@@ -1,10 +1,13 @@
-kind: Service
 apiVersion: v1
+kind: Service
 metadata:
-  name: html
+  name: nginx-service
   namespace: devops-intermidate
 spec:
   selector:
-    app: html
+    app: nginx
   ports:
-    - port: 80
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+  type: LoadBalancer
