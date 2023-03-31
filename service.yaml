@@ -1,0 +1,10 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: html
+  namespace: devops-intermidate
+spec:
+  selector:
+    app: html
+  ports:
+    - port: 80
